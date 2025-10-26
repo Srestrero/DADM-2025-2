@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:minWidth="600dp">
+
+            <!-- BoardView on the left -->
+            <com.example.androidtictactoe_tutorial2.BoardView
+                android:id="@+id/board_view"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Right side content -->
+            <LinearLayout
+                android:id="@+id/right_panel"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/board_view"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical"
+                android:gravity="start">
+
+                <!-- Player turn text -->
+                <TextView
+                    android:id="@+id/text_view_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turno: Jugador 1 (X)"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/black" />
+
+                <!-- Scores -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Humano: "
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/human_score_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Empates: "
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tie_score_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Máquina: "
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/computer_score_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <Button
+                        android:id="@+id/button_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nuevo Juego"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/button_reset_background" />
+
+                    <Button
+                        android:id="@+id/button_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menú"
+                        android:textSize="14sp"
+                        android:padding="8dp"
+                        android:background="@drawable/menu_button_background"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <!-- Menu permanente -->
+                <LinearLayout
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Primera fila del menú -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/menu_new_game"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Nuevo Juego"
+                            android:textSize="10sp"
+                            android:padding="6dp"
+                            android:layout_margin="1dp"
+                            android:drawableTop="@drawable/new_game"
+                            android:drawablePadding="2dp"
+                            android:background="@drawable/button_background" />
+
+                        <Button
+                            android:id="@+id/menu_difficulty"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Dificultad"
+                            android:textSize="10sp"
+                            android:padding="6dp"
+                            android:layout_margin="1dp"
+                            android:drawableTop="@drawable/difficulty_level"
+                            android:drawablePadding="2dp"
+                            android:background="@drawable/button_background" />
+
+                    </LinearLayout>
+
+                    <!-- Segunda fila del menú -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/menu_about"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Acerca de"
+                            android:textSize="10sp"
+                            android:padding="6dp"
+                            android:layout_margin="1dp"
+                            android:drawableTop="@drawable/about_icon"
+                            android:drawablePadding="2dp"
+                            android:background="@drawable/button_background" />
+
+                        <Button
+                            android:id="@+id/menu_quit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Salir"
+                            android:textSize="10sp"
+                            android:padding="6dp"
+                            android:layout_margin="1dp"
+                            android:drawableTop="@drawable/quit_game"
+                            android:drawablePadding="2dp"
+                            android:background="@drawable/button_background" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+</ScrollView>

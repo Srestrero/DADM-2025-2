@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="player1_turn">Turno: Jugador 1 (X)</string>
+    <string name="player2_turn">Turno: Jugador 2 (O)</string>
+    <string name="player1_wins">¡Jugador 1 (X) gana!</string>
+    <string name="player2_wins">¡Jugador 2 (O) gana!</string>
+    <string name="draw">¡Empate!</string>
+    <string name="new_game">Nuevo Juego</string>
+    
+    <!-- Menu strings -->
+    <string name="difficulty_choose">Elegir Dificultad</string>
+    <string name="difficulty_easy">Fácil</string>
+    <string name="difficulty_harder">Intermedio</string>
+    <string name="difficulty_expert">Experto</string>
+    <string name="quit_confirm">¿Salir del juego?</string>
+    <string name="quit_yes">Sí</string>
+    <string name="quit_no">No</string>
+    <string name="about_title">Acerca de</string>
+    <string name="about_message">Juego de Tic Tac Toe\n\nDesarrollado por:\nSantiago Restrepo\n\nVersión: 1.0\n\nCaracterísticas:\n• 3 Niveles de dificultad\n• Jugador vs Computadora\n• Interfaz moderna</string>
+</resources>
