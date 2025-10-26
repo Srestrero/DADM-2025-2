@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Directorio de Empresas</string>
+    <string name="add_company">Agregar Empresa</string>
+    <string name="edit_company">Editar Empresa</string>
+    <string name="delete_company">Eliminar Empresa</string>
+    <string name="company_name">Nombre de la empresa</string>
+    <string name="website">Sitio web</string>
+    <string name="phone">Teléfono</string>
+    <string name="email">Correo electrónico</string>
+    <string name="products_services">Productos y servicios</string>
+    <string name="classification">Clasificación</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="search">Buscar</string>
+    <string name="no_companies">No se encontraron empresas</string>
+    <string name="confirm_delete_title">Confirmar eliminación</string>
+    <string name="confirm_delete_message">¿Está seguro de que desea eliminar esta empresa?</string>
+</resources>
